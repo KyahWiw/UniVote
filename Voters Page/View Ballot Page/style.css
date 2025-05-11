@@ -1,0 +1,204 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Tab Navigation */
+
+.position-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tab-btn.active {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+
+/* Position Groups */
+
+.positions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.position-group {
+    display: none;
+}
+
+.position-group.active {
+    display: block;
+}
+
+.candidate-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.candidate-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.candidate-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.candidate-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #388e3c;
+}

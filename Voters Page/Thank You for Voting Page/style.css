@@ -1,0 +1,210 @@
+/* General Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+header {
+  background-color: #387f39;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 97%;
+  z-index: 1000;
+  /* Ensures it stays on top */
+}
+
+.logo {
+  height: 50px;
+  width: 150px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Container */
+
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+
+aside {
+  width: 250px;
+  background-color: white;
+  padding: 10px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  /* Adjust this based on header height */
+  overflow-y: auto;
+  /* Enables scrolling */
+}
+
+nav h3,
+.notifications h3 {
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav ul li.active {
+  color: rgb(255, 255, 255);
+  background: #4aa34b;
+  border-radius: 5px;
+}
+
+nav ul li:hover {
+  color: rgb(255, 255, 255);
+  background: #4aa34b;
+  border-radius: 5px;
+}
+
+/* Notifications */
+
+.notifications {
+  margin-top: 20px;
+}
+
+.notifications h3 {
+  font-size: 1.2em;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications ul li {
+  padding: 5px 0;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 270px;
+  /* Ensures main content does not overlap the sidebar */
+  overflow-y: auto;
+  height: calc(100vh - 50px);
+  /* Prevents overflowing beyond the viewport */
+}
+
+.vote-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+.vote-summary h2 {
+  color: #2e7d32;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vote-item {
+  text-align: center;
+}
+
+.vote-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #2e7d32;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.vote-card {
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  gap: 10px;
+}
+
+.vote-card .icon {
+  font-size: 24px;
+}
+
+.candidate {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.party {
+  font-style: italic;
+  font-size: 14px;
+}
+
+#backButton {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#backButton:hover {
+  background-color: #1b5e20;
+}

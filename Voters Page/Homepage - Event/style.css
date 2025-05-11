@@ -1,0 +1,514 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Main Content */
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 270px;
+    margin-top: 50px;
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Search Bar */
+
+.search-bar {
+    display: flex;
+    margin-top: 50px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Event Cards Container */
+
+.event-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next row */
+    gap: 20px;
+    /* Add spacing between cards */
+    justify-content: flex-start;
+    /* Align cards to the left */
+}
+
+
+/* Event Card Styling */
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    /* Set a fixed width for the cards */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Event Details Section */
+
+.event-details {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 200px;
+    /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.event-details-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay for better text readability */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.event-details h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+
+/* Wrapper for positions and next button */
+
+.positions-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Center the positions container */
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+
+/* Container for all positions */
+
+.positions-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Ensure positions stay in one row */
+    gap: 20px;
+    /* Add spacing between columns */
+    justify-content: flex-start;
+    /* Align positions to the left */
+    overflow-x: auto;
+    /* Allow horizontal scrolling if content overflows */
+    scroll-behavior: smooth;
+    /* Smooth scrolling for the next button */
+    padding: 10px;
+}
+
+
+/* Each position group (e.g., Presidential, Vice-Presidential, Secretary) */
+
+.position-group {
+    flex: 0 0 auto;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Position title (e.g., Presidential) */
+
+.position-group h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #387f39;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.positions-wrapper {
+    position: relative;
+    /* Ensure the button is positioned relative to this container */
+    display: flex;
+    align-items: center;
+}
+
+
+/* Candidate cards inside each position */
+
+.candidate-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Individual candidate card */
+
+.candidate-card {
+    display: flex;
+    /* Align picture and text side by side */
+    align-items: center;
+    /* Vertically align the picture and text */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    /* Align text to the left */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    gap: 15px;
+    /* Add spacing between the picture and text */
+    margin-bottom: 15px;
+    /* Add spacing between cards */
+}
+
+.candidate-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Candidate picture */
+
+.candidate-picture {
+    width: 70px;
+    /* Set a fixed width for the picture */
+    height: 70px;
+    /* Set a fixed height for the picture */
+    border-radius: 50%;
+    /* Make the picture circular */
+    object-fit: cover;
+    /* Ensure the image fits within the circle */
+    flex-shrink: 0;
+    /* Prevent the picture from shrinking */
+}
+
+
+/* Candidate details */
+
+
+/* Candidate details */
+
+.candidate-card p {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 0.9em;
+    color: #333;
+}
+
+.candidate-card strong {
+    font-size: 1em;
+    color: #000;
+    display: block;
+    /* Ensure the name is on its own line */
+}
+
+.candidate-card em {
+    font-size: 0.9em;
+    color: #666;
+    /* Slightly lighter color for the party list */
+    display: block;
+    /* Ensure the party list is on its own line */
+    margin-top: 2px;
+    /* Add slight spacing between name and party list */
+}
+
+
+/* Transparent Next Button */
+
+.scroll-next {
+    position: absolute;
+    /* Position relative to the candidates section */
+    right: 10px;
+    /* Position it 10px from the right edge of the section */
+    top: 50%;
+    /* Center vertically within the candidates section */
+    transform: translateY(-50%);
+    /* Adjust for perfect vertical centering */
+    background-color: #387f39;
+    /* Green background */
+    color: white;
+    /* White arrow */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    /* Make it circular */
+    font-size: 1.5em;
+    /* Increase the size of the arrow */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    /* Ensure it stays above other elements */
+}
+
+.scroll-next:hover {
+    background-color: #2e6b2f;
+    /* Darker green on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+}
+
+
+/* Previous Button */
+
+.scroll-previous {
+    position: absolute;
+    /* Position relative to the candidates section */
+    left: 10px;
+    /* Position it 10px from the left edge of the section */
+    top: 50%;
+    /* Center vertically within the candidates section */
+    transform: translateY(-50%);
+    /* Adjust for perfect vertical centering */
+    background-color: #387f39;
+    /* Green background */
+    color: white;
+    /* White arrow */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    /* Make it circular */
+    font-size: 1.5em;
+    /* Increase the size of the arrow */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    /* Ensure it stays above other elements */
+}
+
+.scroll-previous:hover {
+    background-color: #2e6b2f;
+    /* Darker green on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+}
+
+
+/* Footer */
+
+.site-footer {
+    background-color: #387f39;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Change from absolute to relative */
+    width: 100%;
+    /* Ensure it spans the full width */
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    /* Add spacing above the footer */
+}
+
+.site-footer a {
+    color: #90ee90;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        height: auto;
+    }
+    main {
+        margin-left: 0;
+    }
+    .candidate-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .candidate-picture {
+        margin-bottom: 10px;
+    }
+    .positions-container {
+        flex-wrap: wrap;
+        /* Allow positions to wrap to the next row on smaller screens */
+    }
+    .position-group {
+        min-width: 100%;
+        /* Make each position take full width on smaller screens */
+    }
+    .scroll-next {
+        display: none;
+        /* Hide the button on smaller screens */
+    }
+}

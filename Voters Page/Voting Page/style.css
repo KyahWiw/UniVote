@@ -1,0 +1,397 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Main Content */
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 150px;
+    margin-left: 270px;
+    /* Ensures main content does not overlap the sidebar */
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+    /* Prevents overflowing beyond the viewport */
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+    color: #5a5a5a;
+}
+
+
+/* Tab Navigation */
+
+.position-tabs {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    gap: 10px;
+    /* Add spacing between buttons */
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #2c80b4;
+    /* Highlight active tab */
+}
+
+.tab-btn:hover {
+    background-color: #2c80b4;
+}
+
+
+/* Candidate Cards */
+
+.positions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center horizontally */
+}
+
+.position-group {
+    display: none;
+    width: 100%;
+    max-width: 800px;
+    /* Limit the width of the content */
+    margin-bottom: 30px;
+    text-align: center;
+    /* Center text */
+}
+
+.position-group.active {
+    display: block;
+}
+
+.candidate-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the cards */
+    gap: 20px;
+    /* Add spacing between cards */
+}
+
+.candidate-card {
+    display: flex;
+    flex-direction: column;
+    /* Align content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: space-between;
+    /* Add spacing between elements */
+    width: 150px;
+    padding: 15px;
+    /* Add more padding for better spacing */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.candidate-card:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+.candidate-card input[type="radio"] {
+    display: block;
+    /* Ensure the radio button is on its own line */
+    margin: 10px auto;
+    /* Center the radio button horizontally */
+    transform: scale(1.5);
+    /* Make the button slightly bigger */
+    cursor: pointer;
+    /* Add a pointer cursor for better UX */
+}
+
+.candidate-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    /* Prevent stretching or cropping */
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    /* Add a background color for better contrast */
+    border: 1px solid #ddd;
+    /* Add a border for better visibility */
+}
+
+.submit-btn {
+    display: block;
+    margin: 20px auto;
+    /* Center the button */
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2c80b4;
+}
+
+
+/* Modal Styles */
+
+.modal {
+    display: none;
+    /* Hide the modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for the modal's size */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add a subtle shadow */
+}
+
+
+/* Modal Actions */
+
+.modal-actions {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.confirm-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.confirm-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn:hover {
+    background-color: #e53935;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background-color: #387f39;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Change from absolute to relative */
+    width: 100%;
+    /* Ensure it spans the full width */
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    /* Add spacing above the footer */
+}
+
+.site-footer a {
+    color: #90ee90;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background-color: #387f39;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Change from absolute to relative */
+    width: 100%;
+    /* Ensure it spans the full width */
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    /* Add spacing above the footer */
+}
+
+.site-footer a {
+    color: #90ee90;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}

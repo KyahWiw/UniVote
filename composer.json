@@ -1,0 +1,8 @@
+{
+    "name": "univote/accounts",
+    "description": "UniVote: An Online Voting System for Student Council",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.29"
+    }
+}
