@@ -1,0 +1,417 @@
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ecf0f1;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Main Content */
+
+main {
+    margin: 0 auto;
+    /* Center the main content horizontally */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    /* Adjust based on header height */
+    max-width: 900px;
+    /* Limit the width of the content */
+    text-align: center;
+    /* Center-align text inside the main content */
+}
+
+main h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+main .subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.result-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.result-summary .summary-item {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-summary .summary-item h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.result-summary .summary-item p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+
+/* Position Groups */
+
+.position-group {
+    margin-bottom: 20px;
+}
+
+.position-group h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    background-color: #4aa34b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.position-group .timestamp {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+main ul li .candidate-rank {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-right: 10px;
+}
+
+main ul li .candidate-info {
+    flex: 1;
+}
+
+main ul li .candidate-votes {
+    text-align: right;
+}
+
+main ul li .vote-bar {
+    width: 150px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+main ul li .vote-bar-fill {
+    height: 100%;
+    background-color: #27ae60;
+}
+
+
+/* Notifications */
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notifications ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notifications ul li .bell-icon {
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+
+/* Table Styling */
+
+table {
+    width: 100%;
+    /* Ensure the table takes up the full width of the container */
+    border-collapse: collapse;
+    /* Remove gaps between table borders */
+    margin: 20px 0;
+    /* Add spacing above and below the table */
+    text-align: left;
+    /* Align text to the left inside the table */
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    /* Add a consistent border to all cells */
+    padding: 8px;
+    /* Add padding inside cells for better readability */
+    vertical-align: middle;
+    /* Ensure vertical alignment is consistent */
+}
+
+th {
+    background-color: #f4f4f4;
+    /* Light gray background for table headers */
+    font-weight: bold;
+    /* Make header text bold */
+    text-align: center;
+    /* Center-align header text */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Alternating row colors for better readability */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    /* Highlight row on hover */
+}
+
+
+/* Print Button */
+
+.print-btn {
+    margin: 20px auto;
+    /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    display: block;
+    /* Ensure the button is centered */
+    text-align: center;
+}
+
+.print-btn:hover {
+    background-color: #45a049;
+}
+
+@media print {
+    aside,
+    nav,
+    footer {
+        display: none;
+        /* Hide the aside and nav elements during printing */
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    main {
+        margin: 0 auto;
+        padding: 0;
+        /* Remove extra padding */
+        width: 100%;
+        /* Expand main content to full width */
+        box-sizing: border-box;
+    }
+    h1 {
+        margin-top: 60px;
+        /* Remove any margin above the title */
+        padding-top: 10px;
+        /* Add a small padding for spacing */
+        text-align: center;
+        /* Center the title */
+    }
+    .subtitle {
+        text-align: center;
+        margin-top: 5px;
+        /* Adjust spacing below the title */
+        margin-bottom: 10px;
+    }
+    .print-btn {
+        display: none;
+        /* Hide the print button during printing */
+    }
+    header .logo,
+    header .user-info {
+        display: none;
+        /* Hide the current logo and user-info during printing */
+    }
+    .print-logo {
+        display: block;
+        /* Show the new logo during printing */
+        margin: 0 auto;
+        text-align: center;
+        width: 150px;
+        /* Adjust the width of the new logo */
+    }
+}
+
+.report-footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+}
+
+.report-footer p {
+    margin: 5px 0;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background-color: #387f39;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Change from absolute to relative */
+    width: 100%;
+    /* Ensure it spans the full width */
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    /* Add spacing above the footer */
+}
+
+.site-footer a {
+    color: #90ee90;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}

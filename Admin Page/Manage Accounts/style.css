@@ -1,0 +1,507 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Main Content */
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 270px;
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+}
+
+
+/* Search Bar */
+
+.search-bar {
+    display: flex;
+    margin-top: 50px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Table Styling */
+
+table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Ensure columns fit within the table width */
+}
+
+thead {
+    background: #4aa34b;
+    /* Header background color */
+    color: white;
+    /* White text for better contrast */
+}
+
+th,
+td {
+    padding: 12px 10px;
+    /* Adjust padding for better fit */
+    text-align: center;
+    /* Center-align text */
+    border-bottom: 1px solid #ddd;
+    /* Add a subtle border */
+    word-wrap: break-word;
+    /* Prevent text overflow */
+    font-size: 0.9em;
+    /* Slightly smaller font for better fit */
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Make headers uppercase */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Alternate row colors */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    /* Highlight row on hover */
+}
+
+
+/* Column Width Adjustments */
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 5%;
+    /* Account No. */
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 10%;
+    /* Student ID */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 10%;
+    /* Last Name */
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 10%;
+    /* First Name */
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 8%;
+    /* Middle Name */
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 8%;
+    /* Year Level */
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+    width: 12%;
+    /* Department */
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+    width: 10%;
+    /* Course */
+}
+
+th:nth-child(9),
+td:nth-child(9) {
+    width: 10%;
+    /* Role */
+}
+
+th:nth-child(10),
+td:nth-child(10) {
+    width: 15%;
+    /* Email */
+}
+
+th:nth-child(11),
+td:nth-child(11) {
+    width: 8%;
+    /* Password */
+}
+
+th:nth-child(12),
+td:nth-child(12) {
+    width: 10%;
+    /* Actions */
+}
+
+.password-table-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.table-password-input {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    width: 90px;
+    letter-spacing: 2px;
+    padding: 0 4px;
+}
+
+.toggle-table-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-table-password:focus {
+    outline: none;
+}
+
+
+/* Action Buttons */
+
+.edit-btn {
+    background: #f4b400;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background: #d39e00;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+
+/* Action */
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.save {
+    background: #2c5e1a;
+    color: white;
+}
+
+
+/* Modal Styling */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #4aa34b;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    background-color: #4aa34b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #3a8a3b;
+}
+
+
+/* Close Button */
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Success and Error Messages */
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
+
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background: white;
+    border: 1px solid #ccc;
+    margin: 2px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #4aa34b;
+    color: white;
+}
+
+.pagination .active {
+    background: #4aa34b;
+    color: white;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85em;
+        /* Reduce font size for smaller screens */
+    }
+    th,
+    td {
+        padding: 8px 5px;
+        /* Reduce padding for smaller screens */
+    }
+}

@@ -1,0 +1,300 @@
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ecf0f1;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Main Content */
+
+main {
+    margin-left: 270px;
+    /* Adjust based on sidebar width */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    /* Adjust based on header height */
+    min-height: calc(100vh - 100px);
+    /* Ensure the main section fills the viewport */
+    box-sizing: border-box;
+    /* Include padding and border in height calculation */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    flex: 1;
+    /* Allow the main content to take up remaining space */
+}
+
+
+/* Election Results Header */
+
+main h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+main .subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+/* Election Results Summary */
+
+.result-summary {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+    /* Add spacing between items */
+}
+
+.result-summary .summary-item {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 15px);
+    /* Make items responsive (3 per row) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    /* Ensure a minimum width for smaller screens */
+}
+
+.result-summary .summary-item h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.result-summary .summary-item p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+
+/* Position Groups */
+
+.position-group {
+    margin-bottom: 20px;
+}
+
+.position-group h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    background-color: #4aa34b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.position-group .timestamp {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* Candidate List */
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+}
+
+main ul li .candidate-rank {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-right: 10px;
+}
+
+main ul li .candidate-info {
+    flex: 1;
+    min-width: 150px;
+    /* Ensure candidate info doesn't shrink too much */
+    font-size: 14px;
+}
+
+main ul li .candidate-votes {
+    text-align: right;
+    min-width: 100px;
+    /* Ensure vote count stays visible */
+    font-size: 14px;
+}
+
+main ul li .vote-bar {
+    width: 150px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+main ul li .vote-bar-fill {
+    height: 100%;
+    background-color: #27ae60;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+        /* Remove sidebar margin on smaller screens */
+        padding: 15px;
+    }
+    .result-summary .summary-item {
+        flex: 1 1 calc(50% - 15px);
+        /* Adjust to 2 items per row on smaller screens */
+    }
+    main ul li {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        align-items: flex-start;
+    }
+    main ul li .candidate-votes {
+        text-align: left;
+        margin-top: 5px;
+    }
+    main ul li .vote-bar {
+        width: 100%;
+        /* Make the vote bar full width on smaller screens */
+    }
+}

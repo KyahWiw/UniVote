@@ -1,0 +1,275 @@
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ecf0f1;
+}
+
+
+/* Header */
+
+header {
+    background-color: #387f39;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for header height */
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    /* Adjust for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h3,
+.notifications h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background: #4aa34b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Notifications */
+
+.notifications {
+    margin-top: 20px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+}
+
+
+/* Main Content */
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 270px;
+    margin-top: 50px;
+    /* Ensures main content does not overlap the sidebar */
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+    /* Prevents overflowing beyond the viewport */
+}
+
+
+/* Search Bar */
+
+.search-bar {
+    display: flex;
+    margin-top: 50px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Greeting Card */
+
+.greeting-card {
+    background-color: #387f39;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* Event Cards Container */
+
+.event-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next row */
+    gap: 20px;
+    /* Add spacing between cards */
+    justify-content: flex-start;
+    /* Align cards to the left */
+}
+
+
+/* Event Card Styling */
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Event Banner Styling */
+
+.event-banner-container {
+    width: 100%;
+    height: 150px;
+    /* Fixed height for the banner */
+    overflow: hidden;
+}
+
+.event-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image scales properly */
+}
+
+
+/* Event Info Styling */
+
+.event-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.event-datetime {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 15px;
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.site-footer {
+    background-color: #387f39;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Change from absolute to relative */
+    width: 100%;
+    /* Ensure it spans the full width */
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    /* Add spacing above the footer */
+}
+
+.site-footer a {
+    color: #90ee90;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}

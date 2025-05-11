@@ -1,0 +1,313 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #09008b 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: white;
+    padding: 32px 28px 24px 28px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin: 40px auto 0 auto;
+}
+
+h2 {
+    color: #2c5e1a;
+    margin-bottom: 24px;
+}
+
+.input-group,
+.mb-3 {
+    margin-bottom: 18px !important;
+    text-align: left;
+}
+
+label,
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input[type="text"].form-control,
+input[type="password"].form-control {
+    width: 100%;
+    padding: 10px 38px 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 0;
+    background: #eaf2ff;
+    transition: border 0.2s;
+}
+
+input[type="text"].form-control:focus,
+input[type="password"].form-control:focus {
+    border: 1.5px solid #004EA8;
+    outline: none;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    width: 100%;
+    padding-right: 38px;
+    margin: 0;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.toggle-password:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.toggle-password svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    margin-top: 2px;
+}
+
+.form-check-label {
+    margin: 0;
+    color: #333;
+    font-size: 15px;
+}
+
+button[type="submit"] {
+    background-color: #004EA8;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1f4914;
+}
+
+.alert-danger {
+    color: #fff;
+    background: #dc3545;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+
+/* 2FA Standalone Page Styles */
+
+.two-fa-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #09008b 100%);
+}
+
+.two-fa-container>.modal-content,
+.two-fa-container>.two-fa-content {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 36px 28px 28px 28px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.two-fa-logo {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 80px;
+}
+
+.two-fa-title {
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 700;
+    color: #2c5e1a;
+}
+
+.two-fa-note {
+    font-size: 0.97rem;
+    color: #555;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.two-fa-actions {
+    margin-top: 18px;
+}
+
+@media (max-width: 500px) {
+    .two-fa-container>.modal-content,
+    .two-fa-container>.two-fa-content {
+        padding: 18px 6vw 18px 6vw;
+    }
+    .two-fa-logo {
+        width: 60px;
+    }
+}
+
+
+/* Footer */
+
+.site-footer {
+    background-color: #387f39;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    margin-top: 0;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.site-footer a {
+    color: #90ee90;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.site-footer .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* For id scan */
+
+#scan-area {
+    width: 340px;
+    margin: 0 auto 20px auto;
+    border: 3px dashed #198754;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    position: relative;
+}
+
+#camera-preview,
+#preview {
+    width: 180px;
+    height: 240px;
+    max-width: 180px;
+    max-height: 240px;
+    aspect-ratio: 3/4;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+    display: block;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#camera-preview {
+    display: none;
+}
+
+#id-frame-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 210px;
+    transform: translate(-50%, -50%);
+    border: 3px solid #ffc107;
+    border-radius: 10px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 2;
+    background: transparent;
+}
